@@ -35,7 +35,7 @@ const Header = () => {
             <div className='max-w-screen-xl w-screen flex items-center justify-center'>
                 <div className='flex w-4/5 sm:w-3/5'>
                     <Link href='/' passHref>
-                        <h1 className='text-indigo-500 text-center font-bold text-2xl hover:cursor-pointer hover:text-blue-700'>Blogifyy</h1>
+                        <h1 className='text-indigo-500 text-center font-bold text-2xl hover:cursor-pointer hover:text-blue-700'>Blogifyyrrrrr</h1>
                     </Link>
                     <div className={`${router.pathname ==='/post/new' && 'hidden'} bg-gray-100 p-1 border-2 border-solid border-gray-600 rounded-md w-1/2 mx-2 flex sm:hidden md:w-80`}>
                         <input
