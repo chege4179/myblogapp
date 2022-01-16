@@ -115,7 +115,7 @@ const CenterPostPage = ({ post,user }) => {
                         )
                     }
                     {
-                        post.comments.reverse().map((comment,index) =>{
+                        post.comments.map((comment,index) =>{
                             return(
                                 <CommentBox key={index} post={post} user={user} comment={comment}/>
                             )
