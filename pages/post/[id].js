@@ -18,7 +18,7 @@ const PostScreen = ({ post,user,posts }) => {
         </Layout>
     );
 };
-export async function getStaticProps({ params:{ id } }){
+export async function getServerSideProps({ params:{ id } }){
     const res = await fetch(`${BaseURL}/post/${id}`)
     const { post } = await res.json()
     const UserEmail = post.email
@@ -34,18 +34,18 @@ export async function getStaticProps({ params:{ id } }){
             user,
             posts
         },
-        revalidate:10
+
     }
 }
-export async function getStaticPaths(){
-    const res = await fetch(`${BaseURL}/post/all`)
-    const { posts }= await res.json()
-
-    const paths = posts.map((post) => ({ params :{ id:post._id }}))
-
-    return{
-        paths,
-        fallback:false
-    }
-}
+// export async function getStaticPaths(){
+//     const res = await fetch(`${BaseURL}/post/all`)
+//     const { posts }= await res.json()
+//
+//     const paths = posts.map((post) => ({ params :{ id:post._id }}))
+//
+//     return{
+//         paths,
+//         fallback:false
+//     }
+// }
 export default PostScreen;

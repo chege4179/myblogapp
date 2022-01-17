@@ -9,6 +9,7 @@ import moment from "moment";
 import {useSelector} from "react-redux";
 import {SelectUser} from "../../ReduxStore/UserReducer";
 import Image from "next/image";
+import {useRouter} from "next/router";
 
 
 
@@ -32,6 +33,7 @@ const ReactQuill = dynamic(
 );
 
 const NewPostPage = () => {
+    const router = useRouter()
     const editorRef = useRef(null);
     const [editorText,setEditorText] = useState('')
     const [coverImage,setCoverImage] = useState('')
@@ -174,6 +176,7 @@ const NewPostPage = () => {
                 const res = await response.json()
                 if (res.success){
                     toast.success(res.msg)
+                    router.push('/')
                 }else {
                     toast.error(res.msg)
                 }

@@ -4,8 +4,20 @@ import LeftHomePage from "../components/LeftHomePage";
 import CenterHomePage from "../components/CenterHomePage";
 import RightHomePage from "../components/RightHomePage";
 import BaseURL from "../util/BaseURL";
+import {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {UserActions} from "../ReduxStore/UserConstants";
 
 export default function Home({ posts }) {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch({
+            type:UserActions.FETCH_FEED_POSTS,
+            payload:posts
+        })
+    }, []);
+
+
   return (
     <Layout title='Blogify | Feed'>
         <div className='flex justify-center w-screen h-full py-1 sm:w-full sm:h-full '>
