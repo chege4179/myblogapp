@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from "../../components/Layout";
 import BaseURL from "../../util/BaseURL";
-import LeftPostPage from "../../components/Post/LeftPostPage";
 import CenterPostPage from "../../components/Post/CenterPostPage";
 import RightPostPage from "../../components/Post/RightPostPage";
 
@@ -9,9 +8,8 @@ const PostScreen = ({ post,user,posts }) => {
     return (
         <Layout title={post.title}>
             <div className='flex justify-center w-full h-full '>
-                <div className='max-w-screen-xl w-full h-full flex md:flex-col md:items-center'>
-                    <LeftPostPage likes={post.likes} post={post} views={post.views} />
-                    <CenterPostPage post={post} user={user}/>
+                <div className='max-w-screen-xl  w-full h-full flex sm:p-0 md:flex-col md:items-center'>
+                    <CenterPostPage post={post} user={user} />
                     <RightPostPage post={post} user={user} posts={posts}/>
                 </div>
             </div>
