@@ -1,11 +1,11 @@
 import React from 'react';
 
 const ProfileCard = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+	return (
+		<div>
+
+		</div>
+	);
 };
 
 export default ProfileCard;

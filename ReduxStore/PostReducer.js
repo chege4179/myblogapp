@@ -1,16 +1,16 @@
 import {UserActions} from "./UserConstants";
 
 
-const PostsReducer =(state = { posts:[] },action) => {
-    switch (action.type){
-        case UserActions.FETCH_FEED_POSTS:
-            return {
-                posts:action.payload,
-            }
+const PostsReducer = (state = {posts: []}, action) => {
+	switch (action.type) {
+		case UserActions.FETCH_FEED_POSTS:
+			return {
+				posts: action.payload,
+			}
 
-        default:
-            return state
-    }
+		default:
+			return state
+	}
 
 
 }
