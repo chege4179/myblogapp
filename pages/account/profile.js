@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 
 const UserProfilePage = () => {
 	return (
-		<Layout post={{title: 'Profile Page', description: "Blogify Profile  Page"}}>
+		<Layout post={{title: 'Profile Page', description: "Blogify Profile  Page"}} title="My Profile">
 			<h1>User Profile Page</h1>
 		</Layout>
 	);

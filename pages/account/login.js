@@ -59,7 +59,7 @@ const Login = () => {
 
 	}
 	return (
-		<Layout post={{title: 'Login Page', description: "Blogify Login Page"}}>
+		<Layout post={{title: 'Login Page', description: "Blogify Login Page"}} title="Login">
 			<div className='flex justify-center items-center w-full h-full'>
 				<div className='w-full h-full max-w-screen-xl flex items-center justify-center'>
 					<div className='flex w-2/5 sm:w-full md:w-full'>

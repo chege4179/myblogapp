@@ -7,7 +7,7 @@ import {ArticleJsonLd, DefaultSeo, NextSeo} from "next-seo";
 import {splitString} from "../util/HelperFunctions";
 import {useRouter} from "next/router";
 
-const Layout = ({children, post}) => {
+const Layout = ({children, post,title}) => {
 	const dispatch = useDispatch()
 	const router = useRouter()
 	useEffect(() => {
@@ -20,7 +20,9 @@ const Layout = ({children, post}) => {
 	}, [dispatch])
 	return (
 		<div className='overflow-x-hidden flex flex-col flex-grow'>
-
+			<Head>
+				<title>{title}</title>
+			</Head>
 			<Header/>
 			<div className='w-full h-full bg-slate-100 flex flex-grow overflow-y-scroll scrollbar-hide'>
 				{children}

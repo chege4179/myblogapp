@@ -18,7 +18,7 @@ export default function Home({posts}) {
 
 
 	return (
-		<Layout post={posts[0]}>
+		<Layout post={posts[0]} title="Blogify Home Page">
 			<div className='flex  justify-center w-screen  py-1 sm:w-full sm:h-full '>
 				<div className='max-w-screen-xl w-full h-full flex justify-center '>
 					<div className='flex justify-evenly w-full h-full sm:flex-col sm:items-center md:flex-col md:items-center'>

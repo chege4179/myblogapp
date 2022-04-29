@@ -8,6 +8,7 @@ const PostScreen = ({post, user, posts}) => {
 	return (
 		<Layout
 			post={post}
+			title={post.title}
 		>
 			<div className='flex justify-center w-full h-full '>
 				<div className='max-w-screen-xl  w-full h-full flex sm:p-0 md:flex-col md:items-center'>
