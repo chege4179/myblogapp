@@ -52,7 +52,7 @@ const Header = () => {
 							onChange={(e) => setSearchTerm(e.target.value)}
 							type='text'
 							placeholder='Search......'
-							className='p-1 bg-gray-100 ml-6 h-8 w-4/5 flex-1 outline-none text-black  '
+							className='p-1 bg-gray-100 ml-2 h-8 w-4/5 flex-1 outline-none text-black  '
 						/>
 						<div className='hover:bg-gray-300 rounded'>
 							<button disabled={searchTerm === ''} className='p-2' onClick={SearchPost}>
@@ -80,13 +80,13 @@ const Header = () => {
 								<>
 									<button
 										onClick={GoToLoginPage}
-										className="whitespace-nowrap relative mx-1 flex justify-center p-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:underline"
+										className="whitespace-nowrap relative mx-1 flex justify-center p-2  text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700  hover:underline"
 									>
 										Log In
 									</button>
 									<button
 										onClick={GoToSignUpPage}
-										className="whitespace-nowrap group relative mx-1 flex justify-center p-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:underline">
+										className="whitespace-nowrap group relative mx-1 flex justify-center p-2 text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700  hover:underline">
 										Create Account
 									</button>
 								</>
@@ -104,8 +104,7 @@ const Header = () => {
 											opened={showDropdown}
 											onClose={() => setShowDropdown(!showDropdown)}
 											width={210}
-											position="bottom"
-										>
+											position="bottom">
 											<h2 className='block px-2 py-2 text-sm font-bold capitalize text-gray-700 hover:bg-blue-500 hover:text-white'>{user.name}</h2>
 											<h2 className='block px-2 py-2 text-sm font-bold text-gray-700 hover:bg-blue-500 hover:text-white'>{user.email}</h2>
 											<hr className='bg-black h-0.5'/>

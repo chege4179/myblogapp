@@ -6,6 +6,7 @@ import {UserActions} from "../ReduxStore/UserConstants";
 import {ArticleJsonLd, DefaultSeo, NextSeo} from "next-seo";
 import {splitString} from "../util/HelperFunctions";
 import {useRouter} from "next/router";
+import Footer from "./Footer";
 
 const Layout = ({children, post,title}) => {
 	const dispatch = useDispatch()
@@ -24,9 +25,10 @@ const Layout = ({children, post,title}) => {
 				<title>{title}</title>
 			</Head>
 			<Header/>
-			<div className='w-full h-full bg-slate-100 flex flex-grow overflow-y-scroll scrollbar-hide'>
+			<div className='w-full min-h-screen bg-slate-100 flex flex-grow overflow-y-scroll scrollbar-hide'>
 				{children}
 			</div>
+			<Footer/>
 		</div>
 	);
 };

@@ -146,7 +146,7 @@ const CenterPostPage = ({post, user}) => {
 			<ToastContainer autoClose={1500}/>
 			<div className="rounded-sm overflow-hidden shadow-lg w-full my-4 sm:my-0 bg-white mb-4 sm:w-full sm:p-0">
 				<Image className="w-full h-64" width={853} height={400} src={post.imageUrl}
-					  alt="Sunset in the mountains"/>
+					  alt={post.title}/>
 				<div className="px-6 pt-4 pb-2 flex justify-between sm:px-1 sm:flex-col">
 					<div className='flex items-center px-4 w-full h-20 sm:px-0 '>
 						<Image width={48} height={48} src={user.imageUrl} className='w-12 h-12 rounded-3xl mx-4'
