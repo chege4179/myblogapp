@@ -11,7 +11,7 @@ const FeedArticle = ({post, width}) => {
 	}
 
 	return (
-		<div className="rounded overflow-hidden shadow-lg w-full my-4 bg-white hover:bg-gray-200"
+		<div className="rounded overflow-hidden  w-full my-4 bg-white  hover:bg-gray-200 hover:drop-shadow-2xl"
 			onClick={GoPostScreen}>
 			<Image className="w-full h-64" width={600} height={300} src={post.imageUrl}
 				  alt={post.title}/>

@@ -13,7 +13,7 @@ import FeedArticle from "../FeedArticle";
 const RightPostPage = ({user, post, posts}) => {
 
 
-	
+
 	const [totalposts, setTotalPosts] = useState(posts.length)
 	const [followers, setFollowers] = useState(user.followers.length);
 	const [following, setFollowing] = useState(user.following.length);
@@ -113,7 +113,7 @@ const RightPostPage = ({user, post, posts}) => {
 	}
 
 	return (
-		<div className='w-4/12 py-4 sm:hidden md:w-full md:h-full '>
+		<div className='w-4/12 py-4 drop-shadow-xl sm:hidden md:w-full md:h-full '>
 			<ToastContainer autoClose={1000}/>
 			<div className='w-full h-full  p-2 md:flex md:flex-col md:items-center'>
 				<div className='md:w-8/12  bg-white rounded-xl border-gray-300 border-solid border-2'>
