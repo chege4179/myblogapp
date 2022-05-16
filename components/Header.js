@@ -11,7 +11,6 @@ import {Popover} from '@mantine/core';
 import {UserActions} from "../ReduxStore/UserConstants";
 
 const Header = () => {
-
 	const user = useSelector(SelectUser)
 	const dispatch = useDispatch()
 	const router = useRouter()
@@ -40,7 +39,7 @@ const Header = () => {
 	}
 
 	return (
-		<div className='bg-white text-gray-200 shadow transition sticky z-20 top-0  border-b-2 border-gray-300 border-solid  w-full basis-16 sm:basis-32 flex items-center justify-center px-4 '>
+		<div className='bg-white text-gray-200 shadow transition border-b-2 border-gray-300 border-solid  w-full h-16 sm:h-32 flex items-center justify-center px-4 fixed z-10'>
 			<div className='max-w-screen-xl w-screen flex sm:flex-col-reverse sm:w-full sm:h-full sm:justify-evenly items-center justify-center'>
 				<div className='flex w-4/5 sm:w-full sm:h-16 sm:h-full sm:flex sm: items-center'>
 					<Link href='/' passHref className="sm:hidden">

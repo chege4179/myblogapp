@@ -25,7 +25,7 @@ const Layout = ({children, post,title}) => {
 				<title>{title}</title>
 			</Head>
 			<Header/>
-			<div className='w-full min-h-screen bg-slate-100 flex flex-grow overflow-y-scroll scrollbar-hide'>
+			<div className='mt-16 w-full min-h-screen bg-slate-100 flex flex-grow overflow-y-scroll scrollbar-hide'>
 				{children}
 			</div>
 			<Footer/>
