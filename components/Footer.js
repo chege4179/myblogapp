@@ -3,8 +3,11 @@ import Link from "next/link";
 import {BsFacebook, BsWhatsapp} from "react-icons/bs";
 import {AiFillLinkedin, AiFillTwitterCircle, AiOutlineInstagram} from "react-icons/ai";
 import {useRouter} from "next/router";
+import {useSelector} from "react-redux";
+import {SelectUser} from "../ReduxStore/UserReducer";
 
 const Footer = () => {
+	const user = useSelector(SelectUser)
 	return (
 		<div className='bg-zinc-800 w-full h-96 flex justify-center items-center sm:w-full overflow-x-hidden sm:h-full'>
 			<div className="w-full h-full max-w-screen-xl  flex flex-col py-2">
@@ -38,15 +41,20 @@ const Footer = () => {
 					</div>
 					<div className="w-1/4 sm:w-full p-4">
 						<h1 className="text-indigo-500 text-xl">CATEGORIES</h1>
-						<Link href="/" passHref={true} className=" ">
+						<Link href="/trending" passHref={true} className=" ">
 							<h1 className=" cursor-pointer text-zinc-400 hover:text-indigo-500 hover:underline ">Trending Posts</h1>
 						</Link>
-						<Link href="/" passHref={true} className=" ">
+						<Link href="/saved" passHref={true} className=" ">
 							<h1 className=" cursor-pointer text-zinc-400 hover:text-indigo-500 hover:underline ">Saved Posts</h1>
 						</Link>
-						<Link href="/" passHref={true} className=" ">
-							<h1 className=" cursor-pointer text-zinc-400 hover:text-indigo-500 hover:underline ">My Posts</h1>
-						</Link>
+						{
+							user !== null && (
+								<Link href={`/profile`} passHref={true} className=" ">
+									<h1 className=" cursor-pointer text-zinc-400 hover:text-indigo-500 hover:underline ">My Posts</h1>
+								</Link>
+							)
+						}
+
 
 					</div>
 					<div className="w-1/4 sm:w-full  p-4">
