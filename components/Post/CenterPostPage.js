@@ -12,17 +12,18 @@ import {GrView} from "react-icons/gr";
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import {BsFillBookmarkFill, BsThreeDots} from "react-icons/bs";
 import {marked} from "marked";
+import Link from "next/link";
+import {Popover} from "@mantine/core";
 
 const CenterPostPage = ({post, user}) => {
 	const [postData,setPostData] = useState(post)
 	const [comments,setComments] = useState(post.comments)
 	const LoggedInUser = useSelector(SelectUser)
 	const [commentBody, setCommentBody] = useState('')
-	const router = useRouter()
 	const [isLiked, setIsLiked] = useState(false)
 	const [likesCount, setLikesCount] = useState(post.likes.length)
 	const [viewsCount, setViewsCount] = useState(post.views.length)
-
+	const [showDropdown, setShowDropdown] = useState(false)
 
 	const LikePost = async () => {
 		if (user === null) {
@@ -173,7 +174,25 @@ const CenterPostPage = ({post, user}) => {
 							<BsFillBookmarkFill size={25}/>
 						</div>
 						<div className='p-4'>
-							<BsThreeDots size={25}/>
+							<BsThreeDots size={25} onClick={() => setShowDropdown(!showDropdown)}/>
+							<Popover
+								opened={showDropdown}
+								onClose={() => setShowDropdown(!showDropdown)}
+								width={210}
+								position="bottom">
+								<Link href={"/post/new"}>
+									<h1
+										className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+										Share Post
+									</h1>
+								</Link>
+								<Link href="/account/settings">
+									<h1
+										className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+										Save Post For Later
+									</h1>
+								</Link>
+							</Popover>
 						</div>
 
 

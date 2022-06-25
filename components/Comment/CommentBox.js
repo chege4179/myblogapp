@@ -68,7 +68,7 @@ const CommentBox = ({ comment, user, post }) => {
 			<ToastContainer autoClose={1500}/>
 			<div className='flex flex-col my-2'>
 				<div className='flex'>
-					<Image width={48} height={48} src={generateAvatarURL(comment.name)} alt='image'
+					<Image width={48} height={48} src={comment.imageUrl} alt='image'
 						  className='w-12 h-12 rounded-2xl'/>
 					<div className='w-full ml-2'>
 						<p className='text-sm font-bold '>{comment.name}</p>
