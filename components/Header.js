@@ -68,7 +68,7 @@ const Header = () => {
 				</div>
 				<div className='flex sm:1/2  sm:w-full justify-end sm:justify-evenly'>
 					<div className="w-1/2 flex justify-start xl:hidden">
-						<Link href='/' passHref >
+						<Link href='/' passHref>
 							<h1 className='text-indigo-500 text-center font-bold  text-2xl hover:cursor-pointer hover:text-blue-700'>Blogify</h1>
 						</Link>
 					</div>
@@ -107,22 +107,30 @@ const Header = () => {
 											<h2 className='block px-2 py-2 text-sm font-bold capitalize text-gray-700 hover:bg-blue-500 hover:text-white'>{user.name}</h2>
 											<h2 className='block px-2 py-2 text-sm font-bold text-gray-700 hover:bg-blue-500 hover:text-white'>{user.email}</h2>
 											<hr className='bg-black h-0.5'/>
-											<a href="#"
-											   className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-												My Profile
-											</a>
-											<a href="#"
-											   className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-												Create Post
-											</a>
-											<a href="#"
-											   className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-												Settings
-											</a>
-											<a href="#" onClick={LogOut}
-											   className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+
+											<Link href={`/profile/${user.username}`}>
+												<h1
+													className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+													My Profile
+												</h1>
+											</Link>
+											<Link href={"/post/new"}>
+												<h1
+													className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+													Create Post
+												</h1>
+											</Link>
+											<Link href="/account/settings">
+												<h1
+												   className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+													Settings
+												</h1>
+											</Link>
+
+											<h1 onClick={LogOut}
+											    className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
 												Sign Out
-											</a>
+											</h1>
 										</Popover>
 									</div>
 									<button
