@@ -128,7 +128,7 @@ const Login = () => {
 									<div className="my-2">
 										<button
 											type="submit"
-											className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+											className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 hover:underline"
 											disabled={isLoading}
 
 										>

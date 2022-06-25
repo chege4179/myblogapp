@@ -4,6 +4,11 @@ body{
     font-family: 'Roboto',sans-serif;
 }
 
+@layer components {
+    .btn-primary {
+        @apply whitespace-nowrap relative mx-1 flex justify-center p-2 text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700  hover:underline;
+    }
+}
 
 @tailwind base;
 @tailwind components;

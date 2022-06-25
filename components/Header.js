@@ -43,7 +43,7 @@ const Header = () => {
 			<div className='max-w-screen-xl w-screen flex sm:flex-col-reverse sm:w-full sm:h-full sm:justify-evenly items-center justify-center'>
 				<div className='flex w-4/5 sm:w-full sm:h-16 sm:h-full sm:flex sm: items-center'>
 					<Link href='/' passHref className="sm:hidden">
-						<h1 className='text-indigo-500 text-center font-bold sm:hidden text-2xl hover:cursor-pointer hover:text-blue-700'>Blogify</h1>
+						<h1 className='text-indigo-500 text-center font-extrabold sm:hidden text-3xl hover:cursor-pointer hover:text-blue-700'>Blogify</h1>
 					</Link>
 					<div className={`${router.pathname === '/post/new' && 'hidden'} bg-gray-100 p-1 border-2 border-solid border-gray-600 rounded-md w-1/2 mx-2 flex sm:h-3/4 sm:items-center sm:justify-center  md:w-80`}>
 						<input
@@ -79,13 +79,13 @@ const Header = () => {
 								<>
 									<button
 										onClick={GoToLoginPage}
-										className="whitespace-nowrap relative mx-1 flex justify-center p-2  text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700  hover:underline"
+										className="btn-primary"
 									>
 										Log In
 									</button>
 									<button
 										onClick={GoToSignUpPage}
-										className="whitespace-nowrap group relative mx-1 flex justify-center p-2 text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700  hover:underline">
+										className="btn-primary">
 										Create Account
 									</button>
 								</>
