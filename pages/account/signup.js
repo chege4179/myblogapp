@@ -41,6 +41,7 @@ const SignUpPage = () => {
 				const res = await response.json()
 				if (res.success) {
 					toast.success(res.msg)
+					await router.push("/account/login")
 				} else {
 					toast.error(res.msg)
 				}
@@ -72,7 +73,6 @@ const SignUpPage = () => {
 											<input
 												value={email}
 												onChange={(e) => setEmail(e.target.value)}
-												id="username"
 												name="email"
 												type="email"
 												autoComplete="email"
@@ -89,7 +89,7 @@ const SignUpPage = () => {
 											<input
 												value={fullname}
 												onChange={(e) => setFullName(e.target.value)}
-												id="username"
+
 												name="full name"
 												type="text"
 												autoComplete="username"
@@ -106,7 +106,7 @@ const SignUpPage = () => {
 											<input
 												value={username}
 												onChange={(e) => setUsername(e.target.value)}
-												id="username"
+
 												name="email"
 												type="text"
 												autoComplete="username"
@@ -157,7 +157,7 @@ const SignUpPage = () => {
 											<input
 												value={conpassword}
 												onChange={(e) => setConPassword(e.target.value)}
-												id="password"
+
 												name="password"
 												type="password"
 												autoComplete="current-password"

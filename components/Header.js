@@ -95,7 +95,7 @@ const Header = () => {
 									<h1 className='text-black sm:hidden pt-2 pr-2'>{user.name}</h1>
 									<div className=''>
 										<Image
-											src={generateAvatarURL(user?.name)} alt={user?.username} width={40}
+											src={user.imageUrl} alt={user?.username} width={40}
 											height={40}
 											className='sm:w-8 sm:h-8   mx-1 rounded-2xl hover:cursor-pointer hover:border-black border-2 border-solid'
 											onClick={() => setShowDropdown(!showDropdown)}/>

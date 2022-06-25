@@ -198,7 +198,7 @@ const CenterPostPage = ({post, user}) => {
 						LoggedInUser !== null && (
 							<>
 								<div className='flex my-2'>
-									<Image width={48} height={48} src={generateAvatarURL(LoggedInUser?.name)} alt='image'
+									<Image width={48} height={48} src={user.imageUrl} alt='image'
 										  className='w-12 h-12 rounded-2xl'/>
 									<textarea
 										value={commentBody}
