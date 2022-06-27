@@ -74,7 +74,6 @@ const CommentBox = ({ comment, user, post }) => {
 						<p className='text-sm font-bold '>{comment.name}</p>
 						<p className='w-full  p-2 rounded-lg border-solid border-gray-300 border-2'>{comment.body}</p>
 					</div>
-
 				</div>
 				{
 					LoggedInUser !== null && (

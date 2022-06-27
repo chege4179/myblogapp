@@ -124,7 +124,6 @@ const Login = () => {
 											</a>
 										</div>
 									</div>
-
 									<div className="my-2">
 										<button
 											type="submit"
