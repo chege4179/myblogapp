@@ -113,7 +113,7 @@ const RightPostPage = ({user, post, posts}) => {
 	}
 
 	return (
-		<div className='w-4/12 py-4 drop-shadow-xl sm:hidden md:w-full md:h-full max-w-md fixed left-1/2 ml-52'>
+		<div className='w-4/12 py-4 drop-shadow-xl sm:hidden md:w-full md:h-full '>
 			<ToastContainer autoClose={1000}/>
 			<div className='w-full h-full  p-2 md:flex md:flex-col md:items-center'>
 				<div className='md:w-8/12  bg-white rounded-xl border-gray-300 border-solid border-2'>

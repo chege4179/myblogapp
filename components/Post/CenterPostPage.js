@@ -143,15 +143,17 @@ const CenterPostPage = ({post, user}) => {
 
 	}
 	return (
-		<div className='w-8/12 px-1 drop-shadow-lg sm:w-full sm:p-0 md:w-full md:p-0 '>
+		<div className='w-8/12 px-1 drop-shadow-lg sm:w-full sm:p-0 md:w-full md:p-0 sm:mt-12'>
 			<ToastContainer autoClose={1500}/>
 			<div className="rounded-sm overflow-hidden shadow-lg w-full my-4 sm:my-0 bg-white mb-4 sm:w-full sm:p-0">
-				<Image className="w-full h-64" width={853} height={400} src={post.imageUrl}
-					  alt={post.title}/>
+				<div className="w-full h-80 relative">
+					<Image className="w-full h-64 relative" width={853} height={400} src={post.imageUrl} layout="fill"
+						  alt={post.title}/>
+				</div>
+
 				<div className="px-6 pt-4 pb-2 flex justify-between sm:px-1 sm:flex-col">
 					<div className='flex items-center px-4 w-full h-20 sm:px-0 '>
-						<Image width={48} height={48} src={user.imageUrl} className='w-12 h-12 rounded-3xl mx-4'
-							  alt={post.title}/>
+						<Image width={48} height={48} src={user.imageUrl} className='w-12 h-12 rounded-3xl mx-4' alt={post.title}/>
 						<div>
 							<h1>Article By : <span className='text-lg font-bold'>{post.author}</span></h1>
 							<h1>Posted on <span className='font-bold'>{post.createdOn}</span> at <span
@@ -235,9 +237,7 @@ const CenterPostPage = ({post, user}) => {
 										</button>
 									)
 								}
-
 							</>
-
 						)
 					}
 					{
