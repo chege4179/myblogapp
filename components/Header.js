@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {BsSearch} from "react-icons/bs";
+import {BsBell, BsBellFill, BsSearch} from "react-icons/bs";
 import {useDispatch, useSelector} from "react-redux";
 import {SelectUser} from "../ReduxStore/UserReducer";
 import {useRouter} from "next/router";
@@ -92,7 +92,16 @@ const Header = () => {
 							) : (
 
 								<div className='flex '>
-									<h1 className='text-black sm:hidden pt-2 pr-2'>{user.name}</h1>
+									<button
+										onClick={GoToCreatePost}
+										className="btn-primary h-10">
+										Create Post
+									</button>
+									<Link href="/notifications">
+										<div className="h-full w-10 flex items-center justify-center hover:bg-indigo-200 mx-2 rounded-md hover:cursor-pointer">
+											<BsBellFill color="black" size={24} />
+										</div>
+									</Link>
 									<div className=''>
 										<Image
 											src={user.imageUrl} alt={user?.username} width={40}
@@ -122,7 +131,7 @@ const Header = () => {
 											</Link>
 											<Link href="/account/settings">
 												<h1
-												   className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+													className="block px-2 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
 													Settings
 												</h1>
 											</Link>
@@ -133,17 +142,11 @@ const Header = () => {
 											</h1>
 										</Popover>
 									</div>
-									<button
-										onClick={GoToCreatePost}
-										className="whitespace-nowrap group relative mx-1 flex justify-center p-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:underline">
-										Create Post
-									</button>
 
 								</div>
 							)
 						}
 					</div>
-
 				</div>
 			</div>
 		</div>

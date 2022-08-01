@@ -8,6 +8,7 @@ import {UserActions} from "../../ReduxStore/UserConstants";
 import {useRouter} from "next/router";
 import {SelectUser} from "../../ReduxStore/UserReducer";
 import { Oval } from "react-loader-spinner";
+import Link from "next/link";
 
 const Login = () => {
 	const [email, setEmail] = useState('')
@@ -62,14 +63,14 @@ const Login = () => {
 		<Layout post={{title: 'Login Page', description: "Blogify Login Page"}} title="Login">
 			<div className='flex justify-center items-center w-full h-full'>
 				<div className='w-full h-full max-w-screen-xl flex items-center justify-center'>
-					<div className='flex w-2/5 sm:w-full md:w-full '>
+					<div className='flex w-2/5 sm:w-full md:w-full'>
 						<ToastContainer autoClose={1500}/>
 						<div className="h-full w-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
 							<div className="max-w-md w-full ">
 								<div>
 									<h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Log In</h2>
 								</div>
-								<form className="mt-8 p-6 h-80 hover:drop-shadow-xl rounded-md bg-gray-200 flex flex-col space-evenly" action="#" method="POST" onSubmit={LoginUser}>
+								<form className="mt-8 p-6 h-80 hover:drop-shadow-xl rounded-md bg-gray-100 flex flex-col space-evenly border-black border " action="#" method="POST" onSubmit={LoginUser}>
 									<div className='py-2'>
 										<label htmlFor="Username"
 											  className="text-xl font-bold text-gray-900 px-2">
@@ -118,10 +119,10 @@ const Login = () => {
 											</label>
 										</div>
 										<div className="text-sm">
-											<a href="#"
+											<Link href="/forgotPassword"
 											   className="font-medium text-indigo-600 hover:text-indigo-500">
 												Forgot your password?
-											</a>
+											</Link>
 										</div>
 									</div>
 									<div className="my-2">
